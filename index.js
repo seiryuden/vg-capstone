@@ -91,11 +91,7 @@ function htmlFrame(){
           </fieldset>
                     
           <label for="max-results" class="results-input-label">Max results</label>
-<<<<<<< HEAD
           <input type="number" id="max-results" class="max-results-input" name="max-results" value="15" min="1" max="50">
-=======
-          <input type="number" id="max-results" class="max-results-input" name="max-results" value="12" min="1" max="20">
->>>>>>> 8ba13aaabf6ac99dfe30df5ef5311cf533def038
           <input type="submit" value="Get content" class="submit js-submit" id="submit">
         </form>
       </section>
