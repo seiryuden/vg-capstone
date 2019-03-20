@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>VG Monitor</title>
+    <title>VGP Monitor</title>
     <meta name="description" content="app for monitoring news & content related to some of the biggest video game platforms">
     <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+  
 </head>
+
 <body>
 
     <header role="banner">
@@ -18,10 +20,10 @@
                 <div class="dropbtn js-dropbtn">&#9776;</div>      
                 <ul id="dropdown-content" class="dropdown-content js-dropdown-content" role="list">
                     
-                    <li class="menu-item js-menu-item js-ps4">Playstation</li>
-                    <li class="menu-item js-menu-item js-nintendo">Nintendo</li>
-                    <li class="menu-item js-menu-item js-xbox">Xbox</li>
-                    <li class="menu-item js-menu-item js-pc">PC</li>
+                    <li class="menu-item ps4 js-menu-item js-ps4">Playstation</li>
+                    <li class="menu-item nintendo js-menu-item js-nintendo">Nintendo</li>
+                    <li class="menu-item xbox js-menu-item js-xbox">Xbox</li>
+                    <li class="menu-item pc js-menu-item js-pc">PC</li>
                 </ul>
             </div>
         </nav>
@@ -31,13 +33,19 @@
         <section class="content js-content" role="container">
             <div id="intro" class="intro show" role="container">
                 <h1>Welcome to VG Monitor. Select above the platform you wish to monitor.</h1>
-                <p class="visit-notes js-visit-notes">Click here for information about this app</p>
+                <p class="visit-notes js-visit-notes"><sp>Click here for information about this app</sp></p>
             </div>
             
         </section>
     </main>
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+    <script src="src-newsAPI.js"></script>
+    <script src="src-gamespot.js"></script>
+    <script src="src-youtube.js"></script>
+    <script src="src-rss.js"></script>
+
 </body>
 </html>
