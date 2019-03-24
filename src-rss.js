@@ -31,8 +31,9 @@ function fetchRSS(){
          })   
     .catch(err => {
       unhide(document.getElementById("rss-error"));
-      $('#rss-error').text(`Something went wrong. ${err.message}`)});
+      $('#rss-error').html(`Something went wrong. Be sure to read the <span class="notes-redir">app's info.</span>`)});
 
       unhide(document.getElementById("rss-container"));
 
   }
+  

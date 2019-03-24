@@ -7,15 +7,20 @@
     <title>VGP Monitor</title>
     <meta name="description" content="app for monitoring news & content related to some of the biggest video game platforms">
     <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-  
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Istok+Web|Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Anonymous+Pro|Armata|Assistant|Didact+Gothic|Gothic+A1|Gudea|Hind+Guntur|Julius+Sans+One|Jura|Libre+Franklin|Maven+Pro|Muli|Nanum+Gothic|Nanum+Myeongjo|Nunito|Overpass|PT+Sans+Caption|Poiret+One|Prompt|Quattrocento+Sans|Questrial|Quicksand|Tajawal|Work+Sans" rel="stylesheet">
+    
+    
+    
 </head>
 
 <body>
 
     <header role="banner">
         <nav role="navigation">
-            <a href="index.html" role="listitem" class="logo-link"> <img class="logo-img" src="img/Untitled.jpg" alt="vg monitor logo"> </a>
+            <a href="index.html" role="listitem" class="logo-link">VGPM</a>
             <div class="dropdown js-dropdown">     
                 <div class="dropbtn js-dropbtn">&#9776;</div>      
                 <ul id="dropdown-content" class="dropdown-content js-dropdown-content" role="list">
@@ -30,22 +35,18 @@
     </header>
 
     <main role="main">
-        <section class="content js-content" role="container">
-            <div id="intro" class="intro show" role="container">
-                <h1>Welcome to VG Monitor. Select above the platform you wish to monitor.</h1>
-                <p class="visit-notes js-visit-notes"><sp>Click here for information about this app</sp></p>
-            </div>
-            
-        </section>
+        
     </main>
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="src-newsAPI.js"></script>
     <script src="src-gamespot.js"></script>
     <script src="src-youtube.js"></script>
     <script src="src-rss.js"></script>
+    
+    
 
 </body>
 </html>

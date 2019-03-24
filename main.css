@@ -14,27 +14,33 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0);
-    background-image: url(img/1384859179756.jpg);
+    background-image: url(img/majora.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: center; 
 }
 
 .logo-link{
-    width: 15%;
+    
+    border: 1px rgb(255, 255, 255) solid;
+    border-top: none;
+    border-radius: 3px;
+    width: 16%;
+    height: 90%;
+    background-color: rgba(255, 211, 65, 0.432);
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+    font-family: 'Bungee Inline', cursive;
 
 }
 
-.logo-img{
-    
-    height: 100%;
-    width: 100%;
-    
-}
 
 .logo-img:hover{
     cursor: pointer;
+    
 }
 
 nav{
@@ -44,6 +50,8 @@ nav{
     width: 100%;
     height: 50px;
     background-color: transparent;
+    font-family: 'Istok Web', sans-serif;
+    z-index: 1;
     
 }
 
@@ -76,8 +84,9 @@ nav{
     
     min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 0;
     border-radius: 2%;
+    
 }
 
 .dropdown-content a {
@@ -102,29 +111,29 @@ nav{
     cursor: pointer;
     transform: scale(1.1);
 
-
 }
 
 .ps4{
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.730);
     
     color: white;
 }
 
 .nintendo{
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.730);
     color: white;
 }
 
 .xbox{
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 128, 0, 0.730);
     color: white;
 }
 
 .pc{
-    background-color: rgba(128, 0, 128, 0.5);
+    background-color: rgba(128, 0, 128, 0.730);
     color: white;
 }
+
 
 .show {display: block;}
 
@@ -149,17 +158,19 @@ main{
     margin: 60% auto 0;
     width: 80%;
     text-align: center;
+   
     
 }
 
 .intro h1{
     margin: 0 auto;
+    color: white;
 }
 
 
 .visit-notes{
     background-color: rgb(245, 213, 146);
-    margin: 97% auto;
+    margin: 97% auto 0;
     width: 80%;
     bottom: 40px;
     font-size: 16px;
@@ -179,9 +190,16 @@ main{
 
 .notes-container{
     font-size: 16px;
-    margin: 27% auto;
+    margin: 25% auto 0;
     width: 80%;
+    background-color: rgba(255, 255, 255, 0.884);
+    border: solid rgb(221, 233, 53) 1px;
+    padding: 15px 18px 5px;
+    border-radius: 3px;
+    
 }
+
+
 .notes-list{
     width:100%;
     margin: 20px 0px;
@@ -198,6 +216,26 @@ main{
     margin: 1% 7%;
 }
 
+.notes-redir{
+    color: blue;
+    text-decoration: underline;
+    padding: 3px;
+
+}
+
+.notes-redir:hover{
+    cursor: pointer;
+}
+
+
+.search-menu{
+    width: 100%;
+    z-index: 0;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
 .search-form{
     width: 90%;
     margin: 74px auto 0;
@@ -211,9 +249,12 @@ fieldset{
 }
 
 legend{
+    display:block;
     width: 100%;
     background-color: rgb(215, 241, 101);
     margin: 20px 0 10px;
+    line-height: 21px;
+    padding-right: 5px;
 }
 
 .source-menu{
@@ -256,94 +297,43 @@ fieldset div{
     margin: 15px auto;
 }
 
-.search-menu{
-    width: 100%;
-}
 
-#date-picker{
-    
-    background-color: white;
-    width: 260px;
-    height: 260px;
-    padding: 15px 15px;
-    margin: 10px auto 0;
-}
-
-
-.ui-datepicker-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 40%;
-
-}
-.ui-datepicker-title{
-    text-align: center;
-    width: 100%;
-    height: 40%;
-}
-
-.ui-datepicker-calendar{
-    width: 100%;
-    height: 200px;
-}
-
-thead{
-    margin: 10px;
-    line-height: 40px;
-}
-
-tbody{
-    height: 100%;
-    width: 100%;
-}
-
-td{
-    text-align: center;
-        
-}
-
-td a{
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
+.ui-datepicker-inline{
+   margin: 0 auto;
     
 }
 
-td a:link{
-    text-decoration: none;
+
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 0;
+  
+
 }
-
-td:hover{
-    background-color: #808080;
-    cursor: pointer;
-}
-
-td:active{
-    background-color: grey;
-}
-
-
 
 .results-section{
     width: 100%;
+    font-family: 'Nunito', sans-serif;
 }
 
 .list-container{
-    width: 85%;
-    margin: 15px auto;
+    width: 87%;
+    margin: 20px auto;
     padding-top: 30px;
     
 }
+
+
 
 #rss-container{
     
     width: 75%;
     padding: 10px;
-    margin: 200px auto 200px;
+    margin: 150px auto 200px;
     font-size: 16px;
     background-color: rgba(0, 0, 0, 0.418);
 }
+
 
 
 .list-header{
@@ -355,6 +345,7 @@ td:active{
     font-size: 27px;
     text-align: center;
     background-color: white;
+    border-radius: 3px;
 }
 
 
@@ -362,54 +353,76 @@ td:active{
     display: block;
     width: 95%;
     height: auto;
-    margin: 3% auto;
+    max-height: 175px;
+    margin: 20px auto 25px;
     
 }
+
+.list{
+    margin-top: 17px;
+    padding: 5px 10px 15px;
+    width: 100%;
+    
+    border-radius: 2px;
+}
+
 
 .news-list{
-    background-color: rgba(242, 255, 127, 0.493);
+    background-color: rgba(201, 128, 243, 0.699);
+    
     
 }
 
+
+
 .youtube-list{
-    background-color: rgba(255, 0, 0, 0.301);
+    background-color: rgba(255, 40, 40, 0.5);
 }
 
 .gamespot-list{
-    background-color: rgba(162, 0, 255, 0.315);
+    background-color: rgba(209, 243, 146, 0.705) ;
 
 }
 
 
-ul{
-    width: 100%;
+.list-item, .rss-list li {
+
+    padding: 1% 2% 9%;
+    
+    overflow-wrap: break-word;
+
 }
 
 
 
-.rss-list li{
-
-    margin: 7% auto;
-
+.list a{
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'PT Sans Caption', sans-serif;
+    
 }
 
 .rss-list a:link{
     color: white;
+    font-size: 16px;
     
+}
+
+.rss-list a:visited{
+
+    color: #450983;
+
 }
 
 .rss-list a:hover{
     color: rgba(253, 161, 86, 0.836);
     
-}
-
-.rss-list a:visited{
-    color: 
     
 }
 
-p{
-    margin: 3%;
+.results-section p{
+    margin: 4%;
+    font-size: 15px;
 }
 
 
@@ -417,6 +430,15 @@ p{
 
 
 @media screen and (min-width: 600px){
+
+    nav{
+        position: absolute;
+        top: 0;
+    }
+
+    .logo-link{
+        width: 8%;
+    }
 
     .intro{
         margin-top: 45%;
@@ -431,7 +453,7 @@ p{
 
     .notes-container{
         
-        margin: 10% auto;
+        margin: 20% auto 0;
         
     }
 
@@ -458,7 +480,7 @@ p{
         position: static;
         margin: auto auto;
         height: 100%;
-        width: 50%;
+        width: 87%;
         top: 0px;
         background-color: transparent;
         box-shadow: none;
@@ -467,7 +489,7 @@ p{
 
     .menu-item{
         height: 100%;
-        width: 95px;
+        width: 105px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -486,9 +508,26 @@ p{
       
       }
 
+    .ps4{
+        background-color: rgba(0, 0, 255, 0.55);
+        
+        color: white;
+    }
     
-   
-
+    .nintendo{
+        background-color: rgba(255, 0, 0, 0.55);
+        color: white;
+    }
+    
+    .xbox{
+        background-color: rgba(0, 128, 0, 0.55);
+        color: white;
+    }
+    
+    .pc{
+        background-color: rgba(128, 0, 128, 0.55);
+        color: white;
+    }
 
     .list-container{
         padding-top: 40px;
@@ -500,10 +539,7 @@ p{
     }
 
 
-    .list li{
-        margin: 10% 7%;
-    }
-
+    
     
 }
 
@@ -519,6 +555,10 @@ p{
         margin-top: 19%;
     }
 
+    .dropdown-content{
+        width: 75%;
+    }
+
     .visit-notes{
         
         margin: 27.5% auto 0;
@@ -528,7 +568,8 @@ p{
 
     .notes-container{
         
-        margin: 10% auto;
+        margin: 20% auto auto;
+        
         
     }
 
@@ -570,6 +611,26 @@ p{
 
     }
 
+    .list .list-item:hover{
+
+        
+        cursor: pointer;
+    }
+    
+
+    .gamespot-list .list-item{
+        border: dotted 1px #919144;
+    }
+
+
+    .news-list .list-item{
+        border: dotted 1px rgb(160, 125, 196) ;
+    }
+
+    .gamespot-list .list-item:hover, .news-list .list-item:hover, .youtube-list .list-item:hover{
+        background-color:#ffffff79;
+    }
+
     #rss-container{
         width: 60%;
     }
@@ -580,34 +641,80 @@ p{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     
 
     .list-container li{
         width: 42%;
-        margin: 4% 4% 0.5%;
+        margin: 6px 0;
+        
+    }
+
+    .list-item, .rss-list li {
+
+        padding-bottom: 2%;
+       
+    
     }
 
     .rss-list li{
         width: 100%;
+
     }
+
+    
 
 
     .thumbnail{
         width: 80%;
+        max-height: 175px;
         
+            
     }
 }
 
-.hidden{
-    display: none;
+@media screen and (min-width: 1200px){
+    .dropdown-content{
+        width: 53%;
+    }
 }
+
+
+@media screen and (min-height: 1000px){
+
+    
+
+    .intro {
+        margin-top: 36%;
+    }
+    
+    .visit-notes{
+        margin-top: 100%;
+    }
+
+    .visit-notes sp {
+        line-height: 40px;
+        height: 30px;
+        
+    
+    
+    }
+
+    
+}
+
+
 
 @media screen and (min-width: 1450px){
 
+    .logo-link{
+        width: 5%;
+    }
+
     .list-container li{
-        width: 25%;
+        width: 32%;
         
     }
 
@@ -615,4 +722,16 @@ p{
         width: 100%;
     }
 
+    .notes-container{
+        margin-top: 9%;
+    }
+
+    .notes-item{
+        margin: 4% auto;
+    }
+
+}
+
+.hidden{
+    display: none;
 }

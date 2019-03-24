@@ -35,7 +35,7 @@ function fetchNews(query, dateFrom, dateTo, maxResults) {
       .then(responseJson => displayResults(responseJson, "news-api", maxResults))
       .catch(err=>{
           unhide(document.getElementById("news-error"));
-          $("#news-error").text(`Something went wrong. ${err.message}`)
+          $("#news-error").html(`Something went wrong. Be sure to read the <span class="notes-redir">app's info.</span>`)
         });
   
         unhide(document.getElementById("news-container"));

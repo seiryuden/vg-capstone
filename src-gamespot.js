@@ -107,7 +107,7 @@ function formatQueryGamespot(params){
     .then(responseJson => displayResults(responseJson, "gamespot"))
     .catch(err => {  
       unhide(document.getElementById("gamespot-error"));
-      $("#gamespot-error").text(`Something went wrong. ${err.message}`);
+      $("#gamespot-error").html(`Something went wrong. Be sure to read the <span class="notes-redir">app's info.</span>`);
     });
     unhide(document.getElementById("gamespot-container"));
   }

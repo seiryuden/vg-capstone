@@ -7,14 +7,30 @@ let platform = {selected: ""};
 // I - PAGE NAVIGATION
 
 
+function displayIntro(){
+
+  $("main").append(htmlIntro());
+
+}
 
 function displayNotes(){
   console.log("displayNotes listening");
+
   $(".visit-notes").click(function(){
 
     $(".intro").replaceWith(htmlNotes());
 
   })
+
+  $("main").on("click", ".notes-redir", function(){
+    
+
+
+    $(".content").replaceWith(htmlNotes());
+
+    
+  })
+
 }
 
 
@@ -37,27 +53,57 @@ function closeDropDown(){
 }
 }
 
+function goToSource(){
+    console.log("goToSource listening");
+
+    $("main").on("click",".list-item", function(event){
+      console.log("list item clicked");
+      let url = $("a", this).attr("href");
+      console.log(url);
+      window.open(url);
+
+    })
 
 
+}
+
+
+function htmlIntro(){
+
+  return `
+  
+  <div class="content js-content" role="container">
+
+    <div id="intro" class="intro show" role="container">
+      <h1>Welcome to VGP Monitor. Select above the platform you wish to monitor.</h1>
+      <p class="visit-notes js-visit-notes"><sp>Click here for information about this app</sp></p>
+    </div>
+            
+  </div>
+  
+  `
+}
 
 function htmlNotes(){
 
   return `
   
-  <div class="notes-container">
-    <h3>A few notes:</h3> 
-      <ul class="notes-list">
-        <li class="notes-item">- This app retrieves and displays content related to major gaming platforms, from different online sources.</li>
-        <li class="notes-item">- Sources set limits on how far back information can be retrieved: 
-          <ul class="sublist">
-             
-            <li> Gamespot: as far as 1996. </li>
-            <li> Youtube: no limit specified.</li>
-            <li> General news sources: 1 month limit.</li> 
-          </ul>
-        </li>
-        <li class="notes-item">- RSS section is bonus content, only showing what is currently on the company/magazine's feed.</li>
-      </ul>
+  <div class="content js-content" role="container">
+    <div class="notes-container">
+      <h3>A few notes:</h3> 
+        <ul class="notes-list">
+          <li class="notes-item">- This app retrieves and displays content related to major gaming platforms, from different online sources.</li>
+          <li class="notes-item">- Sources set limits on how far back information can be retrieved: 
+            <ul class="sublist">
+              
+              <li> Gamespot: as far as 1996. </li>
+              <li> Youtube: no limit specified.</li>
+              <li> General news sources: 1 month limit.</li> 
+            </ul>
+          </li>
+          <li class="notes-item">- RSS section is bonus content, only showing what is currently on the company/magazine's feed.</li>
+        </ul>
+    </div>
   </div>
   
   `
@@ -99,7 +145,7 @@ function htmlFrame(){
           </fieldset>
                     
           <label for="max-results" class="results-input-label">Max results</label>
-          <input type="number" id="max-results" class="max-results-input" name="max-results" value="15" min="1" max="50">
+          <input type="number" id="max-results" class="max-results-input" name="max-results" value="6" min="1" max="50">
 
           <input type="submit" value="Get content" class="submit js-submit" id="submit">
         </form>
@@ -118,25 +164,26 @@ function htmlResults(){
   
   <section class="results-section js-results-section">
       
-    
-    <div id="news-container" class="list-container hidden">
-      <h1 class="list-header">General News Sources</h1>
-      <ul id="news-list" class="news-list list js-news-list">
-      </ul>
-
-      <p id="news-error" class="error hidden"></p>
-    </div>
-
     <div id="gamespot-container" class="list-container hidden">
-      <h1 class="list-header">Gamespot</h1>
+      <h1 class="list-header">Gamespot news</h1>
       <ul id="gamespot-list" class="gamespot-list list js-gamespot-list">
       </ul>
       <p id="gamespot-error" class="error hidden"></p>
 
     </div>
 
+    <div id="news-container" class="list-container hidden">
+      <h1 class="list-header">Other News Sources</h1>
+      <ul id="news-list" class="news-list list js-news-list">
+      </ul>
+
+      <p id="news-error" class="error hidden"></p>
+    </div>
+
+    
+
     <div id="youtube-container" class="list-container hidden"> 
-      <h1 class="list-header">Youtube</h1>
+      <h1 class="list-header">Popular on Youtube</h1>
       <ul id="youtube-list" class="youtube-list list js-youtube-list">
       </ul>
       <p id="youtube-error" class="error hidden"></p>
@@ -167,14 +214,14 @@ function displayPlatformSection(){
     if (event.target.matches(".js-ps4")) {
       
       platform.selected = "PS4";
-      document.body.style.background = `url('img/ps4background.jpg') repeat`
+      document.body.style.background = `url('img/ps47.jpg') repeat fixed 100%`
       console.log(platform.selected);
     }
 
     else if (event.target.matches(".js-nintendo")) {
 
       platform.selected = "Nintendo";
-      document.body.style.background = "#FF615F"; 
+      document.body.style.background = `url(img/peach.jpg) repeat fixed`; 
       console.log(platform.selected);
 
     }
@@ -182,41 +229,25 @@ function displayPlatformSection(){
     else if (event.target.matches(".js-xbox")) {
       
       platform.selected = "Xbox";
-      document.body.style.background = "#3DD607"; 
+      document.body.style.background = `url(img/xbox4light.jpg) repeat fixed`; 
       console.log(platform.selected);
     }
     else if (event.target.matches(".js-pc")) {
       
       platform.selected = "PC games";
-      document.body.style.background = "#B6B3D6";
+      document.body.style.background = `url(img/pc4.jpg) repeat fixed`;
       console.log(platform.selected);
     }
 
     $(".js-content").replaceWith(htmlFrame);
     $("#date-picker").datepicker({
-      
+      maxDate: '0',
       dateFormat:"yy-mm-dd",
+      
      
     });
     
-    
-    
   })
-}
-
-
-// BUSCAR CÓMO ARREGLA ESTO
-
-function markDay(){
-  console.log("markDay ran");
-
-  $("td").click(function(){
-
-    $("td").style.background = "#808080";
-
-  })
-
-
 }
 
 
@@ -233,7 +264,7 @@ function formatResults(title, lead, description, thumbnail, url){
 
     return `
     
-    <li>
+    <li class="list-item">
         
       <h3><a href="${url}" class="link" target="_blank">"${title}"</a></h3>
                       
@@ -241,14 +272,20 @@ function formatResults(title, lead, description, thumbnail, url){
     
     `
   }
+
+  let trimmedDesc = `${description.substring(0,145)}...`;
+  
+
   if(!lead){
+
+    
 
     return `
           
-        <li>
-        <img class="thumbnail" src="${thumbnail}">  
+        <li class="list-item">
+        <img class="thumbnail" src="${thumbnail}"> 
         <h3><a href="${url}" class="link" target="_blank">${title}</a></h3>
-        <p>${description}</p>
+        <p>${trimmedDesc}</p>
               
         </li>
         
@@ -256,11 +293,11 @@ function formatResults(title, lead, description, thumbnail, url){
     
       return `
           
-        <li>
-        <img class="thumbnail" src="${thumbnail}">  
+        <li class="list-item">
+        <img class="thumbnail" src="${thumbnail}"> 
         <h3><a href="${url}" class="link" target="_blank">${title}</a></h3>
         <p>${lead}</p>
-        <p>${description}</p>              
+        <p>${trimmedDesc}</p>              
         </li>
         
   `
@@ -402,17 +439,20 @@ function watchSearch(){
 
   })
 
+
+
 }
 
 
 
 function handleRender(){
-  
+  displayIntro();
   displayNotes();
   displayPlatformSection();
   dropDown();
   closeDropDown();
   watchSearch();
+  goToSource();
 }
 
 $(handleRender)

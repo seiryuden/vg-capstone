@@ -35,7 +35,7 @@ function fetchYoutube(query, dateFrom, dateTo, maxResults){
       .then(responseJson => displayResults(responseJson, "youtube"))
       .catch(err=>{
         unhide(document.getElementById("youtube-error"));
-        $("#youtube-error").text(`Something went wrong. ${err.message}`)
+        $("#youtube-error").html(`Something went wrong. Be sure to read the <span class="notes-redir">app's info.</span>`)
       });
 
       unhide(document.getElementById("youtube-container"));
