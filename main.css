@@ -158,6 +158,7 @@ main{
     margin: 60% auto 0;
     width: 80%;
     text-align: center;
+    font-family: inherit;
    
     
 }
@@ -248,19 +249,28 @@ fieldset{
     font-size: 16px;
 }
 
-legend{
-    display:block;
+legend, .results-input-label{
+    display: inline-block;
     width: 100%;
     background-color: rgb(215, 241, 101);
     margin: 20px 0 10px;
     line-height: 21px;
-    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 16px;
+    border-radius: 2px;
+    
+}
+
+.results-input-label{
+    margin-top: 0;
 }
 
 .source-menu{
     margin: 30px 0 15px;
     
 }
+
+
 
 .date-input{
     margin: auto auto;
@@ -276,19 +286,17 @@ legend{
 fieldset div{
     height: 50%;
     width:100%;
+    
+    
 }
 
 .max-results-input{
     display: inline-block;
-    width: 30%;
+    width: 50px;
     margin: 10px;
 
 }
 
-.results-input-label{
-    display: inline-block;
-  
-}
 
 .submit{
     width: 40%;
@@ -619,12 +627,20 @@ fieldset div{
     
 
     .gamespot-list .list-item{
-        border: dotted 1px #919144;
+
+        box-shadow: 1px 1px #6b984a5c;
     }
 
 
     .news-list .list-item{
-        border: dotted 1px rgb(160, 125, 196) ;
+        box-shadow: 1px 1px rgb(160, 125, 196);
+        
+    }
+
+    .youtube-list .list-item{
+
+        box-shadow: 1px 1px rgba(124, 42, 36, 0.21);
+
     }
 
     .gamespot-list .list-item:hover, .news-list .list-item:hover, .youtube-list .list-item:hover{

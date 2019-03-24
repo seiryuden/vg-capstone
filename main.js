@@ -130,9 +130,9 @@ function htmlFrame(){
             <legend>Select sources</legend>
             <div>
             
-              <label for="news">General news sources</label><input type="checkbox" class="source-input" id="js-checkbox-news" name="news" value="news" checked>
-
               <label for="gamespot">Gamespot</label><input type="checkbox" class="source-input" id="js-checkbox-gamespot" name="gamespot" value="gamespot" checked>
+
+              <label for="news">Other news sources</label><input type="checkbox" class="source-input" id="js-checkbox-news" name="news" value="news" checked>
 
             </div>
             <div>
@@ -145,7 +145,7 @@ function htmlFrame(){
           </fieldset>
                     
           <label for="max-results" class="results-input-label">Max results</label>
-          <input type="number" id="max-results" class="max-results-input" name="max-results" value="6" min="1" max="50">
+          <input type="number" id="max-results" class="max-results-input" name="max-results" value="12" min="1" max="25">
 
           <input type="submit" value="Get content" class="submit js-submit" id="submit">
         </form>
