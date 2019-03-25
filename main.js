@@ -392,7 +392,7 @@ function watchSearch(){
 
   console.log("watchSearch listening");
 
-  $("main").on("submit", function(){ 
+  $("main").on("submit", function(event){ 
     console.log("listener ran");
 
       event.preventDefault();
