@@ -12,7 +12,7 @@ function fetchRSS(){
       PS4 : `${proxyUrl}https://www.youtube.com/feeds/videos.xml?user=PlayStation`,
       Nintendo : `${proxyUrl}https://www.nintendo.co.jp/ir/en/news/news.xml`,
       Xbox : `${proxyUrl}https://news.xbox.com/en-us/feed/`,
-      "PC games": `${proxyUrl}https://www.pcmag.com/Rss.aspx/SectionArticles?sectionId=26589`
+      "PC games": `${proxyUrl}https://www.eurogamer.net/?format=rss&platform=PC`
 
     }
 

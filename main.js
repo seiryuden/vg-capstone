@@ -75,7 +75,7 @@ function htmlIntro(){
   <div class="content js-content" role="container">
 
     <div id="intro" class="intro show" role="container">
-      <h1>Welcome to VGP Monitor. Select above the platform you wish to monitor.</h1>
+      <h1>Welcome to VGP Monitor. Select your platform above.</h1>
       <p class="visit-notes js-visit-notes"><sp>Click here for information about this app</sp></p>
     </div>
             
@@ -101,7 +101,7 @@ function htmlNotes(){
               <li> General news sources: 1 month limit.</li> 
             </ul>
           </li>
-          <li class="notes-item">- RSS section is bonus content, only showing what is currently on the company/magazine's feed.</li>
+          <li class="notes-item">- RSS section is bonus content, only showing what is currently on the company's feed (Eurogamer magazine, in the case of PC).</li>
         </ul>
     </div>
   </div>

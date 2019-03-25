@@ -6,7 +6,7 @@
 html{
     width: 100vw;
     height: 100%;
-
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;
 }
 
@@ -158,7 +158,8 @@ main{
     margin: 60% auto 0;
     width: 80%;
     text-align: center;
-    font-family: inherit;
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
    
     
 }
@@ -195,7 +196,7 @@ main{
     width: 80%;
     background-color: rgba(255, 255, 255, 0.884);
     border: solid rgb(221, 233, 53) 1px;
-    padding: 15px 18px 5px;
+    padding: 25px 18px 5px;
     border-radius: 3px;
     
 }
@@ -208,7 +209,7 @@ main{
 
 .notes-item{
     width: 100%;
-    margin: 8% auto;
+    margin: 5% auto;
     line-height: 30px;
 
 }
@@ -278,7 +279,7 @@ legend, .results-input-label{
 }
 
 .source-input{
-    margin: 8px 12px 8px 7px;
+    margin: 8px 6px 8px;
     vertical-align: middle;
 
 }
