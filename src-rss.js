@@ -6,7 +6,7 @@ function fetchRSS(){
 
     console.log("fetchRss ran")
 
-    const proxyUrl = "http://cors-anywhere.herokuapp.com/";
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const url = {
       
       PS4 : `${proxyUrl}https://www.youtube.com/feeds/videos.xml?user=PlayStation`,
