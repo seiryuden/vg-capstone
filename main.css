@@ -159,20 +159,25 @@ main{
     width: 80%;
     text-align: center;
     font-family: 'Nunito', sans-serif;
-    font-size: 19px;
+    font-size: 20px;
    
     
 }
 
 .intro h1{
+    line-height: 25px;
     margin: 0 auto;
     color: white;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-left: 2px solid #fd3a3a;
+    border-right: 2px solid #d429ff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
 .visit-notes{
     background-color: rgb(245, 213, 146);
-    margin: 97% auto 0;
+    margin: 96% auto 0;
     width: 80%;
     bottom: 40px;
     font-size: 16px;
@@ -209,7 +214,7 @@ main{
 
 .notes-item{
     width: 100%;
-    margin: 5% auto;
+    margin: 4% auto;
     line-height: 30px;
 
 }
@@ -695,6 +700,14 @@ fieldset div{
 @media screen and (min-width: 1200px){
     .dropdown-content{
         width: 53%;
+    }
+
+    .notes-container{
+        width: 66%;
+    }
+
+    .visit-notes{
+        width: 31%;
     }
 }
 
