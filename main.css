@@ -305,10 +305,19 @@ fieldset div{
 
 
 .submit{
-    width: 40%;
-    height: 30px;
     max-width: 150px;
     margin: 15px auto;
+    background-color: #39a239;
+    border: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 2px 2px #2538175c
+}
+
+.submit:hover{
+    cursor: pointer;
 }
 
 
@@ -549,7 +558,7 @@ fieldset div{
 
     .submit{
  
-        margin-left: 150px;
+        margin-left: auto;
     }
 
 

@@ -101,6 +101,8 @@ function htmlNotes(){
               <li> General news sources: 1 month limit.</li> 
             </ul>
           </li>
+
+          <li class="notes-item">- Sources cap the amount of information apps can retrieve. An error message will be shown when the request is refused. 
           <li class="notes-item">- RSS section is bonus content, only showing what is currently on the company's feed (Eurogamer magazine, in the case of PC).</li>
         </ul>
     </div>
