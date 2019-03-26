@@ -1,4 +1,3 @@
-<!-- # VGP Monitor (VGPM)
 
 # VGP Monitor
 
@@ -7,20 +6,22 @@ An application for fetching and displaying news and other online content related
 
 ## Motivation
 
-The aim is to provide a quick, centralized feed of the material pusblished by the source websites. 
+The aim is to provide a quick, centralized feed of the material published by the source websites. 
 
 ## Live app
 
-<https://seiryuden.github.io/vgp-monitor/>
+https://seiryuden.github.io/vgp-monitor/
 
 ## Screenshots
 Landing Page:
 
-![login screen](img/ss-landing.jpg)
+![login screen](/img/ss-landing.jpg)
 
-Platform section>
 
-![platform section](img/ss-platform.png)
+ 
+Platform section:  
+
+![platform section](/img/ss-platform.jpg)
 
 
 ## Built With
@@ -28,5 +29,5 @@ Platform section>
 ### Front-End
 * HTML
 * CSS
-* Javascript
+* JavaScript
 * JQuery
