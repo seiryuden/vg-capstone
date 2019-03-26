@@ -5,7 +5,7 @@
 
 function formatQueryGamespot(params){
 
-    console.log(`formatQueryGamespot ran`);
+    
   
     let queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
     let formatFilter = "filter="+queryItems[3].replace("=",":");
@@ -18,7 +18,7 @@ function formatQueryGamespot(params){
   
   
   function filterGamespotResults(responseJson){
-    console.log(`filterGamespotResults ran`);
+    
   
     let gamespotQueryTerm = platform.selected;
     
@@ -40,14 +40,14 @@ function formatQueryGamespot(params){
     
       }
     }
-    console.log(filteredResults);
+    
     return filteredResults;
   }
   
   
   
   function fetchGamespotHandler(dateFrom, dateTo, maxResults){
-    console.log(`fetchGamespotHandler ran`);
+    
     
     let gamespotParams ={
       
@@ -95,7 +95,7 @@ function formatQueryGamespot(params){
   
   function fetchingGamespot(url){
   
-    console.log(`fetchingGamespot ran on ${url}`);
+    
   
     fetch(url, { method: "GET", mode: "cors", credentials: "same-origin", headers:{ origin: "same-origin"}})
     .then(response =>{

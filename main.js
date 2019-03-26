@@ -14,7 +14,7 @@ function displayIntro(){
 }
 
 function displayNotes(){
-  console.log("displayNotes listening");
+  
 
   $(".visit-notes").click(function(){
 
@@ -36,7 +36,7 @@ function displayNotes(){
 
 
 function dropDown(){
-  console.log("dropDown listening");
+ 
   $(".js-dropbtn").click(function(event){
     document.getElementById("dropdown-content").classList.toggle("show");
   })
@@ -45,7 +45,7 @@ function dropDown(){
 
 
 function closeDropDown(){
-  console.log("closeDropDown listening");
+  
   window.onclick = function(event) {
   if (!event.target.matches(".js-dropbtn" )) {
     document.getElementById("dropdown-content").classList.remove('show');
@@ -54,12 +54,12 @@ function closeDropDown(){
 }
 
 function goToSource(){
-    console.log("goToSource listening");
+    
 
     $("main").on("click",".list-item", function(event){
-      console.log("list item clicked");
+      
       let url = $("a", this).attr("href");
-      console.log(url);
+     
       window.open(url);
 
     })
@@ -208,7 +208,7 @@ function htmlResults(){
 
 
 function displayPlatformSection(){
-  console.log("displayPlatformSection listening");
+  
 
   $(".js-dropdown-content").click(function(event){
 
@@ -217,14 +217,14 @@ function displayPlatformSection(){
       
       platform.selected = "PS4";
       document.body.style.background = `url('img/ps47.jpg') repeat fixed 100%`
-      console.log(platform.selected);
+     
     }
 
     else if (event.target.matches(".js-nintendo")) {
 
       platform.selected = "Nintendo";
       document.body.style.background = `url(img/peach.jpg) repeat fixed`; 
-      console.log(platform.selected);
+     
 
     }
     
@@ -232,13 +232,13 @@ function displayPlatformSection(){
       
       platform.selected = "Xbox";
       document.body.style.background = `url(img/xbox4light.jpg) repeat fixed`; 
-      console.log(platform.selected);
+      
     }
     else if (event.target.matches(".js-pc")) {
       
       platform.selected = "PC games";
       document.body.style.background = `url(img/pc4.jpg) repeat fixed`;
-      console.log(platform.selected);
+      
     }
 
     $(".js-content").replaceWith(htmlFrame);
@@ -260,7 +260,7 @@ function displayPlatformSection(){
 
 function formatResults(title, lead, description, thumbnail, url){
 
-  console.log(`formatResults ran`);
+ 
 
   if(!lead & !description & !thumbnail){
 
@@ -309,7 +309,7 @@ function formatResults(title, lead, description, thumbnail, url){
 
 
 function formatQueryParams(params){
-  console.log(`formatQueryParams ran`);
+  
 
   let queryItems = Object.keys(params).map(key => `${key}=${params[key]}`);
   return queryItems.join('&');
@@ -329,7 +329,7 @@ function unhide(container){
 
 function displayResults(responseJson, source, maxResults){
 
-  console.log(`displayResults ran on ${responseJson}`);
+  
   
 
   if(source == "news-api"){
@@ -392,10 +392,10 @@ function displayResults(responseJson, source, maxResults){
 
 function watchSearch(){
 
-  console.log("watchSearch listening");
+  
 
   $("main").on("submit", function(event){ 
-    console.log("listener ran");
+    
 
       event.preventDefault();
       $(".js-results-section").remove();
@@ -407,33 +407,33 @@ function watchSearch(){
       let dateFrom = $("#date-picker").datepicker({dateFormat: "yyyy-mm-dd"}).val();
       let dateTo = $("#date-picker").datepicker({dateFormat: "yyyy-mm-dd"}).val();
       let maxResults = $("#max-results").val();
-      console.log(`Date selected: ${dateFrom} to ${dateTo}`);
-      console.log(`maxResults is ${maxResults}`);
+      
+      
 
 
       if(document.getElementById("js-checkbox-news").checked){
-        console.log("News checkbox checked");
+        
 
         fetchNews(platform.selected, dateFrom, dateTo, maxResults);
 
       }
 
       if(document.getElementById("js-checkbox-gamespot").checked){
-        console.log("Gamespot checkbox checked");
+        
                   
         fetchGamespotHandler(dateFrom, dateTo, maxResults)
 
       }
       
       if(document.getElementById("js-checkbox-youtube").checked){
-        console.log("Youtube checkbox checked");
+       
 
         fetchYoutube(platform.selected, dateFrom, dateTo, maxResults);
 
       }
 
       if(document.getElementById("js-checkbox-rss").checked){
-        console.log("RSS checkbox checked");
+        
 
         fetchRSS();
 

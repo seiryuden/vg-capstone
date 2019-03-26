@@ -5,10 +5,7 @@
 
 function fetchYoutube(query, dateFrom, dateTo, maxResults){
 
-    console.log(`fetchYoutube ran`);
-
-    
-
+   
     let youtubeParams = {
       key: "AIzaSyDTmUpkAHabtNw5ITDo10GusfQiQt9i_a8",
       q: query,
@@ -23,7 +20,7 @@ function fetchYoutube(query, dateFrom, dateTo, maxResults){
 
     let queryString = formatQueryParams(youtubeParams); 
     const url = `https://www.googleapis.com/youtube/v3/search?${queryString}`
-    console.log(url);
+   
     
     fetch(url)
       .then(response => {

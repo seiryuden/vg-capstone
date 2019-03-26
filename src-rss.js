@@ -4,7 +4,7 @@
 
 function fetchRSS(){
 
-    console.log("fetchRss ran")
+    
 
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const url = {
@@ -16,7 +16,7 @@ function fetchRSS(){
 
     }
 
-    console.log(url[platform.selected]);
+    
   fetch(url[platform.selected])
     .then((response) => {
       if (response.ok) {

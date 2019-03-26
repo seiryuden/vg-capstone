@@ -4,7 +4,7 @@
 
 
 function fetchNews(query, dateFrom, dateTo, maxResults) {
-    console.log("fetchNews ran");
+   
   
     
   
@@ -20,7 +20,7 @@ function fetchNews(query, dateFrom, dateTo, maxResults) {
     const queryString = formatQueryParams(params);
     const url = 'https://newsapi.org/v2/everything?' + queryString;
   
-    console.log(url);
+   
   
     
   
