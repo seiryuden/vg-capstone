@@ -48,7 +48,6 @@ function formatQueryGamespot(params){
   
   function fetchGamespotHandler(dateFrom, dateTo, maxResults){
     
-    
     let gamespotParams ={
       
       api_key: "6d688d5fbafaba05b884c174077e96b62997c1a9",

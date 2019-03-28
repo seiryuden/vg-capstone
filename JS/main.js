@@ -24,13 +24,9 @@ function displayNotes(){
 
   $("main").on("click", ".notes-redir", function(){
     
-
-
     $(".content").replaceWith(htmlNotes());
 
-    
   })
-
 }
 
 
@@ -53,6 +49,8 @@ function closeDropDown(){
 }
 }
 
+
+
 function goToSource(){
     
 
@@ -63,9 +61,8 @@ function goToSource(){
       window.open(url);
 
     })
-
-
 }
+
 
 
 function htmlIntro(){
@@ -83,6 +80,8 @@ function htmlIntro(){
   
   `
 }
+
+
 
 function htmlNotes(){
 
@@ -164,7 +163,7 @@ function htmlResults(){
 
   return `
   
-  <section class="results-section js-results-section">
+  <section class="results-section js-results-section" aria-live="polite">
       
     <div id="gamespot-container" class="list-container hidden">
       <h1 class="list-header">Gamespot news</h1>
@@ -260,7 +259,6 @@ function displayPlatformSection(){
 
 function formatResults(title, lead, description, thumbnail, url){
 
- 
 
   if(!lead & !description & !thumbnail){
 
@@ -271,7 +269,6 @@ function formatResults(title, lead, description, thumbnail, url){
       <h3><a href="${url}" class="link" target="_blank">"${title}"</a></h3>
                       
     </li>
-    
     `
   }
 
@@ -279,8 +276,6 @@ function formatResults(title, lead, description, thumbnail, url){
   
 
   if(!lead){
-
-    
 
     return `
           
@@ -328,9 +323,6 @@ function unhide(container){
 
 
 function displayResults(responseJson, source, maxResults){
-
-  
-  
 
   if(source == "news-api"){
 
@@ -392,8 +384,6 @@ function displayResults(responseJson, source, maxResults){
 
 function watchSearch(){
 
-  
-
   $("main").on("submit", function(event){ 
     
 
@@ -402,8 +392,6 @@ function watchSearch(){
       $(".js-content").append(htmlResults);
 
       
-      
-
       let dateFrom = $("#date-picker").datepicker({dateFormat: "yyyy-mm-dd"}).val();
       let dateTo = $("#date-picker").datepicker({dateFormat: "yyyy-mm-dd"}).val();
       let maxResults = $("#max-results").val();
@@ -440,8 +428,6 @@ function watchSearch(){
       }
 
   })
-
-
 
 }
 
