@@ -18,7 +18,8 @@ function fetchNews(query, dateFrom, dateTo, maxResults) {
     };
   
     const queryString = formatQueryParams(params);
-    const url = 'https://newsapi.org/v2/everything?' + queryString;
+    const url = 'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?' + queryString;
+    console.log(queryString);
   
    
   
